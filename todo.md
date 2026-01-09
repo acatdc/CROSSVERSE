@@ -105,8 +105,7 @@ Key decisions made during development:
 | 2026-01-08 | Created todo.md | Maintain context between sessions | ✅ Done |
 | 2026-01-08 | Umami for analytics | Free, privacy-focused | ✅ Done |
 | 2026-01-09 | Wiki MVP approach | Notion export has HTML issues, start with clean intro page | ✅ Done |
-| 2026-01-09 | HTML export + turndown | HTML export cleaner than markdown, use turndown converter | ✅ Done |
-| 2026-01-09 | Manual wiki content | Owner will manually create wiki pages tomorrow | 🔄 Pending |
+| 2026-01-09 | Manual wiki content | Owner will manually create all wiki pages (no automated conversion) | 🔄 In Progress |
 
 ---
 
@@ -149,13 +148,11 @@ Key decisions made during development:
 ### Session 2026-01-09
 - Researched wiki engines (Docusaurus vs VitePress vs Nextra vs MkDocs)
 - Selected **Docusaurus** (best Notion support, large community)
-- Setup Docusaurus wiki project
-- Tested HTML export from Notion (better than markdown export)
-- Created HTML→markdown converter using `turndown`
-- Successfully converted General overview page
+- Setup Docusaurus wiki project structure
 - Fixed MDX compilation issues (style attributes, HTML tags)
 - Wiki working locally at localhost:3000
-- **Next session**: Manually create all wiki pages in markdown format
+- **Decision**: Owner will manually create all wiki pages (no automated migration)
+- Removed converter scripts (convert-html-to-md.js, migrate-wiki-v2.js)
 
 ### Session 2026-01-08
 - Added Umami analytics to landing

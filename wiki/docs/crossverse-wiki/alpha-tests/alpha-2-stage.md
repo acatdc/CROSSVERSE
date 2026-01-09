@@ -1,3 +1,8 @@
+---
+title: Alpha 2 Stage
+slug: /crossverse-wiki/alpha-tests/alpha-2-stage
+---
+
 # Alpha-2 stage
 
 Release date: Sept. 2023.
@@ -23,7 +28,7 @@ During the alpha-2 stage, there will be several prize rounds, at the end of whic
 
 ## PvP1 mode
 
-This is a game where the player's task is to build the most broad and dense *network*. The *network* is built by installing [*nodes*](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md) and then connecting them together. Only 1 [node](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md) can be installed on one parcel, so the space for network deployment is limited by the number of parcels in the world. And you are not alone in this world ;)
+This is a game where the player's task is to build the most broad and dense *network*. The *network* is built by installing [*nodes*](./alpha-2-stage.md) and then connecting them together. Only 1 [node](./alpha-2-stage.md) can be installed on one parcel, so the space for network deployment is limited by the number of parcels in the world. And you are not alone in this world ;)
 
 To be able to play and experience CROSSVERSE augmented reality layer you should have Hyp-0 NFT on your wallet and login into the DCL through our portal: [https://play.crossverse.world/](https://play.crossverse.world/)
 
@@ -36,15 +41,15 @@ The session will take place 4 days before the tournament. The purpose of this se
 There is simple few actions you have to check:
 
 - Login into DCL test-net client via this link: [https://play.crossverse.world](https://play.crossverse.world/)
-- Wear TEST Hyp-0 (backpack -`<?>` acc -`<?>` earrings -`<?>` Hyp-0 TEST)
-- Build at least 1 [node](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md)
-- Build a network of two or more connected [nodes](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md)
+- Wear TEST Hyp-0 (backpack -> acc -> earrings -> Hyp-0 TEST)
+- Build at least 1 [node](./alpha-2-stage.md)
+- Build a network of two or more connected [nodes](./alpha-2-stage.md)
 - Drop a message in the # alpha2 chat in our [Discord](https://discord.gg/hzxEWzh2cb)
 
 There are extra actions which we recommend to check as well:
 
 - Opening *the map* and checking your network on it
-- [Hacking](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md) another player's [node](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md)
+- [Hacking](./alpha-2-stage.md) another player's [node](./alpha-2-stage.md)
 - Posting a screenshot of the map with your network in # alpha2 chat in our [Discord](https://discord.gg/hzxEWzh2cb).
 
 There is video demonstration of all these steps passed through:
@@ -84,62 +89,62 @@ Round 4: Sep 18 - Sep 20 (48 hours)
 
 ### General rules & recommendations
 
-- You can do three simple actions: 1) [Create your node](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md); 2) [Link your nodes](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md); 3) [Hack into other nodes](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md). As well you can do many misc actions such as [sniffing](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md) and [finger-printing](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md).. but they are rather secondary and non-mandatory to play with.
-- There can be **no more than 1 [node](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md)** per parcel of land. If someone installed his node already you can not install your in that parcel.
-- You can connect [*nodes](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md)* placed in neighboring parcels into a growing network. [Hyp-0](./../platform-entities-7aa70bd04d014e659a0071fa62f9cbbd/hyp-0-5bcb88hac9aapou5d-47f3bc403e914210908ca1289bad2fc2.md) attempts to do this [automatically when you create *nodes* sequentially](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md) in neighboring parcels. If you move too far away, [Hyp-0](./../platform-entities-7aa70bd04d014e659a0071fa62f9cbbd/hyp-0-5bcb88hac9aapou5d-47f3bc403e914210908ca1289bad2fc2.md) will lose the connection with the previous *node* and the new *node* will be out of connection with the previous, as a result, your network will have a gap but [you can connect them manually](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md) later on.
+- You can do three simple actions: 1) [Create your node](./alpha-2-stage.md); 2) [Link your nodes](./alpha-2-stage.md); 3) [Hack into other nodes](./alpha-2-stage.md). As well you can do many misc actions such as [sniffing](./alpha-2-stage.md) and [finger-printing](./alpha-2-stage.md).. but they are rather secondary and non-mandatory to play with.
+- There can be **no more than 1 [node](./alpha-2-stage.md)** per parcel of land. If someone installed his node already you can not install your in that parcel.
+- You can connect [*nodes](./alpha-2-stage.md)* placed in neighboring parcels into a growing network. [Hyp-0](./platform-entities/hyp-0.md) attempts to do this [automatically when you create *nodes* sequentially](./alpha-2-stage.md) in neighboring parcels. If you move too far away, [Hyp-0](./platform-entities/hyp-0.md) will lose the connection with the previous *node* and the new *node* will be out of connection with the previous, as a result, your network will have a gap but [you can connect them manually](./alpha-2-stage.md) later on.
 - Bigger your network - the better.
-- You can build as many separate networks as you want. And you can join them together in one huge network by [linking them](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md).
-- Linking between the [*nodes*](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md) matters. How? - you will have to figure this out empirically over time.
+- You can build as many separate networks as you want. And you can join them together in one huge network by [linking them](./alpha-2-stage.md).
+- Linking between the [*nodes*](./alpha-2-stage.md) matters. How? - you will have to figure this out empirically over time.
 - **Limit on nodes**: There is a cap of 120 available nodes in your Hyp-0 storage. As well there is 30 seconds cooldown before regenerating a node in your storage.
 - Hacking - Allows you to convert a node from another network into a node in your network. But this comes **at a risk**.
 - Hacking: **probabilities** - When attempting to hack a network that is the same size as yours, the probability of a successful hack is 50%. If your network is twice as large, the chance of successful hack doubles. Similarly the opposite - if you try to hack a network that is twice your size, there is a twice bigger chance of failure in your try.
-- Hacking: **the risks** - In the case of an unsuccessful attempt to hack into someone else’s network - another network takes over your [active node](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md). Simply put, you lose your node.
+- Hacking: **the risks** - In the case of an unsuccessful attempt to hack into someone else’s network - another network takes over your [active node](./alpha-2-stage.md). Simply put, you lose your node.
 - UI messages: If something went wrong, take your attention to Hyp-0 terminal messages. You should be able to see error messages which lead you to a better understanding of what the issue is.
 - The map mode: As for now we have very wonky-monkey Map visualization with issues. This is alpha stage ;)
 
 ### UI commands
 
-- Setup —`<?>` setFingerprint
+- Setup —> setFingerprint
     
     Digital signature of your nodes. Why is it need? Its totally up to you actually.. for an example - you can put there your phone number… so any time some-one approach your node he could call you and ask your permission to hack you. At this alpha-2 stage you can have one fingerprint for all of your nodes at once but later on you will be able to assign unique fingerprints for each node.
     
-- **<.`<?>`**		create [node](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md) *(shortcut : E)*
+- < . >		create [node](./alpha-2-stage.md) *(shortcut : E)*
     
-    Attempt to create a [node](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md). Not more than one node per parcel. 
+    Attempt to create a [node](./alpha-2-stage.md). Not more than one node per parcel. 
     
-- <?`<?>`		rtfm
+- < ? >		rtfm
     
     Link to the page with instructions and tips.
     
-- <O`<?>`	the map
+- < O >	the map
     
     All nodes registered in the system can be seen on this map. To get an updated map just refresh the page.
     
-- <../`<?>`	exit PvP1
+- < ../ >	exit PvP1
     
     Exit PvP1 mode and return to main menu.
     
-- <+`<?>`		link [nodes](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md) *(shortcut : E)*
+- < + >		link [nodes](./alpha-2-stage.md) *(shortcut : E)*
     
     Attempt to connect two nodes together. This way your network grows.
     
-- <x`<?>`		hack [node](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md) *(shortcut : E)*
+- < x >		hack [node](./alpha-2-stage.md) *(shortcut : E)*
     
-    Attempt to hack this node. If successful it become yours, otherwise you will lose your active node. For details please refer to [RULES](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md) page
+    Attempt to hack this node. If successful it become yours, otherwise you will lose your active node. For details please refer to [RULES](./alpha-2-stage.md) page
     
-- <.#`<?>`	edit node fingerprint
+- < .# >	edit node fingerprint
     
     Digital signature of this particular node.
     
-- (.)		bind to the [node](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md) (make it active\primary) *(shortcut : F)*
+- (.)		bind to the [node](./alpha-2-stage.md) (make it active\primary) *(shortcut : F)*
     
     Make a node *active*. An *active node* is a node from which connections are automatically build.  
     
-- #.#		firewall the [node](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md)
+- #.#		firewall the [node](./alpha-2-stage.md)
     
     TBA
     
-- <.-.-.`<?>`	sniffing
+- < .-.-. >	sniffing
     
     Scan selected node underlying network to see how much nodes in it which gives you a sense of power of the network.
     
@@ -148,7 +153,7 @@ Round 4: Sep 18 - Sep 20 (48 hours)
 
 - General step by step All in one video
     
-    [Here](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md)
+    [Here](./alpha-2-stage.md)
     
 - activate pvp1
     
@@ -181,7 +186,7 @@ Round 4: Sep 18 - Sep 20 (48 hours)
 
 ### FAQ
 
-What is a “node” ? : Node is an asset in form of a black parallepiped, which installed by player on the parcel to mark it as owned by this particular player. For other details please refer to [General rules](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md) page.
+What is a “node” ? : Node is an asset in form of a black parallepiped, which installed by player on the parcel to mark it as owned by this particular player. For other details please refer to [General rules](./alpha-2-stage.md) page.
 
 ### Round2 updates
 
@@ -195,7 +200,7 @@ Changes:
 4.  Energy regenerates with at speed of 1 Energy per 2.8 minutes.
 5. Deploying a node consume 1 Energy
 6. Hacking attempt consume 1 Energy
-7. Hacker’s “[**lucky punch**](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md)” - when your hacking attempt is successefull then by [*random](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md)** case you can hack TWO connected nodes at a time. Where random case is depends on the size of your network compared to enemy’s network: the smaller your network is compared to enemy’s net, the greater the chance of [“lucky punch](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md)”.
+7. Hacker’s “[**lucky punch**](./alpha-2-stage.md)” - when your hacking attempt is successefull then by [*random](./alpha-2-stage.md)** case you can hack TWO connected nodes at a time. Where random case is depends on the size of your network compared to enemy’s network: the smaller your network is compared to enemy’s net, the greater the chance of [“lucky punch](./alpha-2-stage.md)”.
 - The math behind hacker’s “Lucky punch” feature
     
     table showing probability relative to the proportion of two networks.
@@ -242,7 +247,7 @@ Final round is here. 48 hours long party with breaks ofc 🙂 The game balance f
     4. Energy regenerates with at speed of 1 Energy per 168sec.
     5. **New in hacking mechanics:** If the hacking attempt fails the node from your network that you lose due to failed hacking attempt becomes neutral. 
     6. **Neutral nodes:** They marked by gray color. Probability to hack neutral node is 100%. You even can hack them without active connection with your other node.
-    7. **New feature: [Firewall. Please refer to special chapter related to it](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md).**
+    7. **New feature: [Firewall. Please refer to special chapter related to it](./alpha-2-stage.md).**
     
 - **Changes in reward system**:
     1. The entire pool of rewards per round has increased due to reduction from R3 reward pool.
@@ -261,11 +266,11 @@ Final round is here. 48 hours long party with breaks ofc 🙂 The game balance f
     
     **Keep in mind:**
     
-    - Firewall [cost you 1% per hour](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md). (in nodes)
+    - Firewall [cost you 1% per hour](./alpha-2-stage.md). (in nodes)
     - You can’t deploy new nodes and hack other nodes when firewall is activated.
     - There is 15 minutes cooldown between deactivation and subsequent activation of the firewall.
     - **Firewall price**.
         
         General cost is 1% per hour.
         
-        As soon as you activate the firewall, the system immediately write off 1% of your nodes. They became [*netural nodes*](./alpha-2-stage-99525832050b4ba9b5d5fb3d7f964a35.md). And so on each next hour until you turn off firewall mode. But minimum 1 node.
+        As soon as you activate the firewall, the system immediately write off 1% of your nodes. They became [*netural nodes*](./alpha-2-stage.md). And so on each next hour until you turn off firewall mode. But minimum 1 node.

@@ -1,3 +1,8 @@
+---
+title: Alpha 1 Stage
+slug: /crossverse-wiki/alpha-tests/alpha-1-stage
+---
+
 # Alpha-1 stage
 
 Release date: January 2023.
@@ -6,7 +11,7 @@ Target participants rate: 10 people.
 
 ## DISCLAIMER
 
-At this stage, we are testing the technical aspects and infrastructure of the backend, as well as the most basic gameplay of [HYP-0](./../platform-entities-7aa70bd04d014e659a0071fa62f9cbbd/hyp-0-5bcb88hac9aapou5d-47f3bc403e914210908ca1289bad2fc2.md): activation**→**navigation**→**receiving rewards.
+At this stage, we are testing the technical aspects and infrastructure of the backend, as well as the most basic gameplay of [HYP-0](./platform-entities/hyp-0.md): activation**→**navigation**→**receiving rewards.
 Now there are only 10 locations in our database and 30 routes to them (3 per location).
 
 We deliberately did not make detailed gameplay instructions as we want to check how intuitive the process is now. General advice we should ask you - try to finish as many exploration tasks as you can. Maximum unique routes is 30 but you can finish as many as you want, not limited to 30.
@@ -51,14 +56,14 @@ STEP3: Activate Hyp-0 smart-wearable
 
 ## Hyp-0 UI
 
-Your digital friend has quite oldschool interface to operate with.. General information can be found here: [Hyp-0 UI](./../platform-entities-7aa70bd04d014e659a0071fa62f9cbbd/hyp-0-5bcb88hac9aapou5d-47f3bc403e914210908ca1289bad2fc2.md)
+Your digital friend has quite oldschool interface to operate with.. General information can be found here: [Hyp-0 UI](./platform-entities/hyp-0.md)
 
 There is a short description of each available commands:
 
 - **`exploration`** : Start new task or resume uncompleted one.
-- **`charge`** : Start charging process. Each location allow you to gather energy into [Qbits](./../platform-entities-7aa70bd04d014e659a0071fa62f9cbbd/qbite28099s-5bcb88kjucb90bc9aat5d-0a8e6e3878d94fc9af9e01d58ecaab5c.md) in the tail of your Hyp-0. One charge took one Qbit-space.
+- **`charge`** : Start charging process. Each location allow you to gather energy into [Qbits](./platform-entities/qbits.md) in the tail of your Hyp-0. One charge took one Qbit-space.
 - **`exit`** : Close UI terminal.
-- **`unload`** : Start 2 hours cooldown timer. You will not be able to start new task until the timer runs out. Usually you should not use this command **until** Hyp-0 ask you for that. When unload process is finished you can claim reward for each [Qbit](./../platform-entities-7aa70bd04d014e659a0071fa62f9cbbd/qbite28099s-5bcb88kjucb90bc9aat5d-0a8e6e3878d94fc9af9e01d58ecaab5c.md) which was charged.
+- **`unload`** : Start 2 hours cooldown timer. You will not be able to start new task until the timer runs out. Usually you should not use this command **until** Hyp-0 ask you for that. When unload process is finished you can claim reward for each [Qbit](./platform-entities/qbits.md) which was charged.
 - **`update`** : Update terminal window.
 - **`claim`** : Activating the transfer of reward tokens from the system to your account. **Important!** *When you activate this command you communicate directly with blockchain thus sometimes your transaction can be delayed in a queue, in some rare cases this delay can last hours! You cant play with Hyp-0 until your transaction is approved. In normal case your transaction approved within a few seconds.*
 
@@ -91,7 +96,7 @@ There are several issues that every alpha1 participant will almost certainly fac
 
 Sometimes you can found out that the world seems empty… or Hyp-0 pointing you at empty parcel. Like the image below:
 
-![Untitled](./alpha-1-stage-cf51e2b92ee14b09a8f50e6a2509bfb1/untitled.png)
+![Untitled](./alpha-1-stage/untitled.png)
 
 One of the known reason of that issue is a long idle mode of your character. If you go out of your PC for a 5-10 minutes and comeback, there is big chance you will catch that issue.
 
@@ -103,7 +108,7 @@ Close current session (web page) and reopen your personal web link we provided y
 
 Sometimes the scene looks really weird.. for an example in the image below there is huge gray planes around… 
 
-![Untitled](./alpha-1-stage-cf51e2b92ee14b09a8f50e6a2509bfb1/untitled-1.png)
+![Untitled](./alpha-1-stage/untitled-1.png)
 
 **Solution**:
 
@@ -135,7 +140,7 @@ Just deactivate Hyp-0 smart-wearable and activate it again.
 
 In some scenes there can be broken mechanics for interactive elements like a doors, so you trying to open it but it just dosnt work… like the image below:
 
-![Untitled](./alpha-1-stage-cf51e2b92ee14b09a8f50e6a2509bfb1/untitled-2.png)
+![Untitled](./alpha-1-stage/untitled-2.png)
 
 **Solution**:
 
@@ -145,7 +150,7 @@ In this case you can try one of the options - 1) Just close whole page and reope
 
 There is an example:
 
-![Untitled](./alpha-1-stage-cf51e2b92ee14b09a8f50e6a2509bfb1/untitled-3.png)
+![Untitled](./alpha-1-stage/untitled-3.png)
 
 **Solution**:
 

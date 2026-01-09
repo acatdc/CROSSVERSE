@@ -1,3 +1,8 @@
+---
+title: Alpha Dcl Retro Testing Tuesdays
+slug: /crossverse-wiki/alpha-tests/alpha-dcl-retro-testing-tuesdays
+---
+
 # Alpha-DCL Retro Testing Tuesdays
 
 Release date: May 2023.
@@ -29,11 +34,11 @@ In fact, you will connect absolutely the same original DCL infrastructure but wi
 
 ### General rules & recommendations
 
-- You can do three simple actions: 1) [Create your node](./alpha-dcl-retro-testing-tuesdays-2818c27bf9d44fcab389ff557f073515.md); 2) [Link your nodes](./alpha-dcl-retro-testing-tuesdays-2818c27bf9d44fcab389ff557f073515.md); 3) [Hack into other nodes](./alpha-dcl-retro-testing-tuesdays-2818c27bf9d44fcab389ff557f073515.md). As well you can do many misc actions such as [sniffing](./alpha-dcl-retro-testing-tuesdays-2818c27bf9d44fcab389ff557f073515.md) and [finger-printing](./alpha-dcl-retro-testing-tuesdays-2818c27bf9d44fcab389ff557f073515.md).. but they are rather secondary and non-mandatory to play with.
+- You can do three simple actions: 1) [Create your node](./alpha-dcl-retro-testing-tuesdays.md); 2) [Link your nodes](./alpha-dcl-retro-testing-tuesdays.md); 3) [Hack into other nodes](./alpha-dcl-retro-testing-tuesdays.md). As well you can do many misc actions such as [sniffing](./alpha-dcl-retro-testing-tuesdays.md) and [finger-printing](./alpha-dcl-retro-testing-tuesdays.md).. but they are rather secondary and non-mandatory to play with.
 - There can be **no more than 1 node** per parcel of land.
-- You can connect *nodes* placed in neighboring parcels into a growing network. [Hyp-0](./../platform-entities-7aa70bd04d014e659a0071fa62f9cbbd/hyp-0-5bcb88hac9aapou5d-47f3bc403e914210908ca1289bad2fc2.md) attempts to do this [automatically when you create *nodes* sequentially](./alpha-dcl-retro-testing-tuesdays-2818c27bf9d44fcab389ff557f073515.md) in neighboring parcels. If you move too far away, [Hyp-0](./../platform-entities-7aa70bd04d014e659a0071fa62f9cbbd/hyp-0-5bcb88hac9aapou5d-47f3bc403e914210908ca1289bad2fc2.md) will lose the connection with the previous *node* and the new *node* will be out of connection with the previous, as a result, your network will have a gap but [you can connect them manually](./alpha-dcl-retro-testing-tuesdays-2818c27bf9d44fcab389ff557f073515.md) later on.
+- You can connect *nodes* placed in neighboring parcels into a growing network. [Hyp-0](./platform-entities/hyp-0.md) attempts to do this [automatically when you create *nodes* sequentially](./alpha-dcl-retro-testing-tuesdays.md) in neighboring parcels. If you move too far away, [Hyp-0](./platform-entities/hyp-0.md) will lose the connection with the previous *node* and the new *node* will be out of connection with the previous, as a result, your network will have a gap but [you can connect them manually](./alpha-dcl-retro-testing-tuesdays.md) later on.
 - Bigger your network - the better.
-- You can build as many separate networks as you want. And you can join them together in one huge network by [linking them](./alpha-dcl-retro-testing-tuesdays-2818c27bf9d44fcab389ff557f073515.md).
+- You can build as many separate networks as you want. And you can join them together in one huge network by [linking them](./alpha-dcl-retro-testing-tuesdays.md).
 - Linking between the *nodes* matters. How? - you will have to figure this out empirically over time.
 - Hacking - Allows you to convert a node from another network into a node in your network. But this comes **at a risk**.
 - Hacking: **probabilities** - When attempting to hack a network that is the same size as yours, the probability of a successful hack is 50%. If your network is twice as large, the chance of successful hack doubles. Similarly the opposite - if you try to hack a network that is twice your size, there is a twice bigger chance of failure in your try.
@@ -43,35 +48,35 @@ In fact, you will connect absolutely the same original DCL infrastructure but wi
 
 ### UI commands
 
-- Setup —`<?>` setFingerprint
+- Setup —> setFingerprint
     
     Digital signature of your nodes. Why is it needed? It's totally up to you actually.. for example - you can put there your phone number… so any time someone approaches your node he could call you and ask your permission to hack you. At this alpha-2 stage you can have one fingerprint for all of your nodes at once but later on you will be able to assign unique fingerprints for each node.
     
-- **<.`<?>`**		create node
+- < . >		create [node](./alpha-2-stage.md) *(shortcut : E)*
     
-    Attempt to create a node. Not more than one node per parcel. 
+    Attempt to create a [node](./alpha-2-stage.md). Not more than one node per parcel. 
     
-- <?`<?>`		instructions
+- < ? >		rtfm
     
     Link to the page with instructions and tips.
     
-- <O`<?>`	map
+- < O >	the map
     
     All nodes registered in the system can be seen on this map. To get an updated map just refresh the page.
     
-- <../`<?>`	finish PvP1
+- < ../ >	finish PvP1
     
     Exit PvP1 mode and return to the main menu.
     
-- <+`<?>`		link nodes
+- < + >		link nodes
     
     Attempt to connect two nodes together. This way your network grows.
     
-- <x`<?>`		hack node
+- < x >		hack node
     
-    Attempt to hack this node. If successful it becomes yours, otherwise, you will lose your active node. For details please refer to the [RULES](./alpha-dcl-retro-testing-tuesdays-2818c27bf9d44fcab389ff557f073515.md) page
+    Attempt to hack this node. If successful it becomes yours, otherwise, you will lose your active node. For details please refer to the [RULES](./alpha-dcl-retro-testing-tuesdays.md) page
     
-- <.#`<?>`	edit node fingerprint
+- < .# >	edit node fingerprint
     
     Digital signature of this node.
     
@@ -83,7 +88,7 @@ In fact, you will connect absolutely the same original DCL infrastructure but wi
     
     TBA
     
-- <.-.-.`<?>`	sniffing
+- < .-.-. >	sniffing
     
     Scan the selected node underlying the network to see how many nodes are in it.
     
