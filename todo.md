@@ -21,15 +21,22 @@ Launch full web presence for CROSSVERSE with focus on SEO indexing and minimal c
 - [x] Deploy to Vercel
 - [x] Configure DNS (Namecheap → Vercel)
 - [x] Verify site is live at https://crossverse.tech
-- [ ] Setup analytics (Google Analytics or Umami)
-- [ ] Submit to Google Search Console
-- [ ] Submit sitemap to search engines
+- [x] Setup analytics (Umami Cloud)
+- [x] Submit to Google Search Console
+- [x] Submit sitemap to search engines
 
 ### Wiki (`wiki.crossverse.tech`)
-- [ ] Decide on tech for using to implement onsite wiki.
-- [ ] Migrate content from `tmp/wiki/` (Notion export)
-- [ ] Configure project structure & navigation
-- [ ] Deploy to Vercel (separate project or monorepo)
+- [x] Decide on tech: **Docusaurus** selected
+- [x] Setup Docusaurus project structure
+- [x] Create MVP intro page
+- [x] Build successful (npm run build)
+- [x] Local dev server working (localhost:3000)
+- [ ] **Migrate all Notion content to Docusaurus** (fix formatting issues)
+- [ ] Verify wiki looks good locally (match Notion structure)
+- [ ] Git initialized & commit content
+- [ ] Create GitHub repository for wiki
+- [ ] Push code to GitHub
+- [ ] Deploy to Vercel (separate project)
 - [ ] Configure DNS for subdomain `wiki.crossverse.tech`
 - [ ] Verify wiki is live
 - [ ] Submit wiki to Google Search Console
@@ -46,7 +53,9 @@ Launch full web presence for CROSSVERSE with focus on SEO indexing and minimal c
 - [ ] Add OG image (`og-image.jpg` referenced in meta tags)
 
 ### Wiki Improvements
-- [ ] Review all migrated content for formatting issues
+- [ ] Gradually migrate Notion content (fix HTML issues in markdown)
+- [ ] Add more documentation pages manually
+- [ ] Add images/screenshots
 
 ### SEO & Analytics
 - [ ] Setup proper analytics tracking
@@ -92,14 +101,22 @@ Key decisions made during development:
 |------|----------|-----------|--------|
 | 2026-01-07 | Plain HTML for landing | Fastest deployment, no build step | ✅ Done |
 | 2026-01-07 | Vercel for hosting | Free tier, auto-deploy, easy DNS | ✅ Done |
-| 2026-01-07 | Docusaurus for wiki | Best Notion markdown support | 🔄 In progress |
+| 2026-01-07 | Docusaurus for wiki | Best Notion markdown support | ✅ Done |
 | 2026-01-08 | Created todo.md | Maintain context between sessions | ✅ Done |
+| 2026-01-08 | Umami for analytics | Free, privacy-focused | ✅ Done |
+| 2026-01-09 | Wiki MVP approach | Notion export has HTML issues, start with clean intro page | ✅ Done |
+| 2026-01-09 | HTML export + turndown | HTML export cleaner than markdown, use turndown converter | ✅ Done |
+| 2026-01-09 | Manual wiki content | Owner will manually create wiki pages tomorrow | 🔄 Pending |
 
 ---
 
 ## 🚨 Blockers & Issues
 
-*None currently*
+**Notion Export Issues** (non-critical):
+- HTML tags in markdown (`<?>`, `<O>`) break MDX parser
+- Image paths reference non-existent Notion hashes
+- Internal links use Notion URL encoding
+- **Solution**: Start with clean MVP, migrate content manually over time
 
 ---
 
@@ -120,18 +137,31 @@ Key decisions made during development:
 - ✅ Auto-deployment configured
 
 **Next Priority**:
-- 🎯 Deploy wiki to `wiki.crossverse.tech`
+- 🎯 Migrate Notion content to Docusaurus (fix HTML/formatting issues)
+- 🎯 Verify wiki locally before deploying
 
-**Estimated Progress**: ~40% of Phase 1 complete
+**Estimated Progress**: ~50% of Phase 1 complete (wiki content migration needed)
 
 ---
 
 ## 🔄 Session Notes
 
+### Session 2026-01-09
+- Researched wiki engines (Docusaurus vs VitePress vs Nextra vs MkDocs)
+- Selected **Docusaurus** (best Notion support, large community)
+- Setup Docusaurus wiki project
+- Tested HTML export from Notion (better than markdown export)
+- Created HTML→markdown converter using `turndown`
+- Successfully converted General overview page
+- Fixed MDX compilation issues (style attributes, HTML tags)
+- Wiki working locally at localhost:3000
+- **Next session**: Manually create all wiki pages in markdown format
+
 ### Session 2026-01-08
+- Added Umami analytics to landing
+- Configured Google Search Console (DNS verification)
+- Submitted sitemap
 - Created todo.md for progress tracking
-- Confirmed landing page is live
-- Ready to start wiki deployment
 
 ### Session 2026-01-07 (previous chat)
 - Created landing page

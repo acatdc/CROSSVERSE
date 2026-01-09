@@ -3,7 +3,29 @@
     "allow": [
       "Bash(git init:*)",
       "Bash(python -m http.server:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git rm:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(ssh-keygen:*)",
+      "Bash(cat:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(ssh-keyscan:*)",
+      "Bash(~/.ssh/known_hosts)",
+      "Bash(GIT_SSH_COMMAND=\"ssh -i ~/.ssh/github_crossverse\" git push:*)",
+      "Bash(curl:*)",
+      "Bash(npx create-docusaurus@latest wiki classic --typescript false)",
+      "Bash(rm:*)",
+      "Bash(npx create-docusaurus@latest:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(node migrate-wiki.js:*)",
+      "Bash(find:*)",
+      "Bash(npm start)",
+      "Bash(node convert-html-to-md.js:*)",
+      "Bash(taskkill:*)",
+      "Bash(npm run clear:*)"
     ]
   }
 }
