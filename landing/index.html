@@ -106,6 +106,33 @@
             border-top: 1px solid rgba(255, 255, 255, 0.2);
         }
 
+        .wiki-button {
+            display: inline-block;
+            background: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 1.5rem 0 2rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .wiki-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(0, 210, 255, 0.5);
+            background: linear-gradient(90deg, #00e0ff 0%, #4a8df5 100%);
+        }
+
+        .social-cta {
+            margin-top: 2rem;
+            font-style: italic;
+            color: #a0aec0;
+        }
+
         @media (max-width: 600px) {
             h1 {
                 font-size: 2.5rem;
@@ -132,7 +159,8 @@
 
         <div class="description">
             <p>Building bridges between WEB3.0 metaverses. Aggregate user traffic, explore new digital worlds, and earn rewards through P2E mechanics.</p>
-            <p>Think of user traffic in metaverses like liquidity in DeFi. CROSSVERSE is the bridge connecting them all.</p>
+            <a href="https://wiki.crossverse.tech" class="wiki-button">Explore Wiki</a>
+            <p class="social-cta">If you are genuinely interested in the metaverse and the future — join us on social media, together we can build something amazing! In the meantime, check out our wiki to see the big picture of what we're planning ;)</p>
         </div>
 
         <div class="features">
@@ -150,7 +178,7 @@
             </div>
         </div>
 
-        <div class="status">Platform launching soon</div>
+        <div class="status">2026. we still working on it! :)</div>
     </div>
 </body>
 </html>
