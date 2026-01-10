@@ -3,22 +3,11 @@ title: General Overview
 slug: /crossverse-wiki/general-overview
 ---
 
-<details>
-<summary>test section</summary>
-
-Blabla1.
-
-blabla2.
-```python
-some extra text
-```
-
-</details>
 
 # **What is CROSSVERSE?**
 
 <details>
-<summary>show</summary>
+<summary>expand</summary>
 
 CROSSVERSE is **not a game** - it's a user traffic aggregation and management **platform** for [WEB 3.0 ready](./general-overview-8ba05a8fdd4d4438a5aa9d48195dde9b.md) metaverses.
 
@@ -29,32 +18,43 @@ So, CROSSVERSE for the metaverses is effectively the same as [[1inch.io](https:/
 </details>
 
 # **What are we building?**
+<details>
+<summary>expand</summary>
 
 We are building a platform that will allow you to build a bridge to any metaverse! If the metaverse supports WEB 3.0 - it can be integrated into the CROSSVERSE. 
 
 We have a lot of work to do, and we are starting with the Decentraland metaverse ([DCL](./general-overview.md)). Due to its wide range of technical capabilities for building complex user applications, and its longer history than any other WEB 3.0 metaverse, [DCL](./general-overview.md) is the ideal candidate for our first step in deploying the CROSSVERSE platform.
+</details>
 
 # Short term **roadmap**
-
+<details>
+<summary>expand</summary>
 ### The first step consists of two key building blocks:
 
 - Deployment of web interfaces for CROSSVERSE [*clients*](./general-overview.md).
 - Deployment of gamified context inside [DCL](./general-overview.md) with elements of [p2e mechanics](./general-overview.md) for [*user*](./general-overview.md) rewards.
 
-The result of the first step is a working platform where anyone can bring traffic on their location in [DCL](./general-overview.md) for a certain price. What [*client*](./general-overview.md) paid us will be distributed among CROSSVERSE [*user](./general-overview.md)s* equivalent to their activity.
+The result of the first step is a working platform where anyone can bring traffic on their location in [DCL](./general-overview.md) for a certain price. What [*client*](./general-overview.md) paid us will be distributed among CROSSVERSE [users](./general-overview.md) equivalent to their activity.
 
-<aside>
-💡 A. More CROSSVERSE [*clients*](./general-overview.md) **→** higher user reward pool.
-B. Higher user [reward pool](./general-overview.md) **→** more CROSSVERSE [*user](./general-overview.md)s*.
-C. More CROSSVERSE [*user](./general-overview.md)s* **→** higher Metaverse traffic.
+:::tip
+
+A. More CROSSVERSE [clients](./general-overview.md) **→** higher user reward pool.
+
+B. Higher user [reward pool](./general-overview.md) **→** more CROSSVERSE [users](./general-overview.md).
+
+C. More CROSSVERSE [users](./general-overview.md) **→** higher Metaverse traffic.
+
 D. Higher Metaverse traffic **→** More CROSSVERSE [*clients*](./general-overview.md) **→**  A. **🧙‍♂️**
-</aside>
+
+:::
+
 
 ### The second step includes essentially one of the most important elements:
 
 Expansion to other metaverses.
 
 The result of this phase will be a working model for tunneling user traffic between [DCL](./general-overview.md) and the first partner metaverses. And it will be fun, damn it! 🔥 [Join now!](https://discord.gg/hzxEWzh2cb)
+</details>
 
 # **And finally... What is the purpose?**
 

@@ -18,3 +18,11 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
 }
+
+.alert--success {
+  line-height: 1.25;
+  padding: 0.5rem 1rem; /* Уменьшает внутренние поля самого блока */
+}
+.alert--success p {
+  margin-bottom: 0.25rem;
+}

@@ -50,6 +50,7 @@ const sidebars = {
             'crossverse-wiki/alpha-tests/alpha-dcl-retro-testing-tuesdays',
           ],
         },
+        'crossverse-wiki/markdown-tips',
       ],
     },
   ],
