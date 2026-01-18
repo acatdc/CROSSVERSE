@@ -26,7 +26,20 @@
       "Bash(node convert-html-to-md.js:*)",
       "Bash(taskkill:*)",
       "Bash(npm run clear:*)",
-      "Bash(npm uninstall:*)"
+      "Bash(npm uninstall:*)",
+      "Bash(dir /b /a:d)",
+      "Bash(dir:*)",
+      "Bash(python:*)",
+      "Bash(tree:*)",
+      "Bash(timeout 3 tail:*)",
+      "Bash(git ls-tree:*)",
+      "Bash(timeout 5 tail:*)",
+      "Bash(tasklist:*)",
+      "Bash(findstr:*)",
+      "Bash(netstat:*)",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)",
+      "Bash(git checkout:*)"
     ]
   }
 }

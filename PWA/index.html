@@ -13,15 +13,15 @@
     <meta name="description" content="Crossverse PWA Application">
 
     <!-- Apple Touch Icons -->
-    <link rel="apple-touch-icon" sizes="152x152" href="/app/icons/icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="192x192" href="/app/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="192x192" href="/app/icons/icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/app/icons/icon-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512x512.png">
 
     <!-- Manifest -->
-    <link rel="manifest" href="/app/manifest.json">
+    <link rel="manifest" href="/manifest.json">
 
     <title>Crossverse - Loading</title>
 
@@ -310,7 +310,7 @@
         // Load random preset
         async function loadRandomPreset() {
             try {
-                const response = await fetch('/app/presets/presets.json');
+                const response = await fetch('/presets/presets.json');
                 const data = await response.json();
                 const presets = data.presets;
 
@@ -320,7 +320,7 @@
 
                 // Load preset script
                 const script = document.createElement('script');
-                script.src = `/app/presets/${randomPreset.file}`;
+                script.src = `/presets/${randomPreset.file}`;
 
                 return new Promise((resolve, reject) => {
                     script.onload = () => {

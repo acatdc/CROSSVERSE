@@ -1,6 +1,6 @@
 # CROSSVERSE - TODO & Progress Tracker
 
-> **Last updated**: 2026-01-08
+> **Last updated**: 2026-01-10
 > **Purpose**: Track progress and maintain context between sessions
 
 ---
@@ -28,17 +28,12 @@ Launch full web presence for CROSSVERSE with focus on SEO indexing and minimal c
 ### Wiki (`wiki.crossverse.tech`)
 - [x] Decide on tech: **Docusaurus** selected
 - [x] Setup Docusaurus project structure
-- [x] Create MVP intro page
-- [x] Build successful (npm run build)
-- [x] Local dev server working (localhost:3000)
-- [ ] **Migrate all Notion content to Docusaurus** (fix formatting issues)
-- [ ] Verify wiki looks good locally (match Notion structure)
-- [ ] Git initialized & commit content
-- [ ] Create GitHub repository for wiki
-- [ ] Push code to GitHub
-- [ ] Deploy to Vercel (separate project)
-- [ ] Configure DNS for subdomain `wiki.crossverse.tech`
-- [ ] Verify wiki is live
+- [x] Migrate all Notion content to Docusaurus
+- [x] Verify wiki looks good locally
+- [x] Add wiki to GitHub repository (monorepo)
+- [x] Deploy to Vercel
+- [x] Configure custom domain `wiki.crossverse.tech`
+- [x] Verify wiki is live at https://wiki.crossverse.tech
 - [ ] Submit wiki to Google Search Console
 
 ---
@@ -52,10 +47,6 @@ Launch full web presence for CROSSVERSE with focus on SEO indexing and minimal c
 - [ ] Improve mobile responsiveness (if needed)
 - [ ] Add OG image (`og-image.jpg` referenced in meta tags)
 
-### Wiki Improvements
-- [ ] Gradually migrate Notion content (fix HTML issues in markdown)
-- [ ] Add more documentation pages manually
-- [ ] Add images/screenshots
 
 ### SEO & Analytics
 - [ ] Setup proper analytics tracking
@@ -75,16 +66,13 @@ Launch full web presence for CROSSVERSE with focus on SEO indexing and minimal c
 ## 🔧 Technical Debt & Maintenance
 
 ### Documentation
-- [x] Create onboarding.md
-- [x] Create onboarding_tech_assumptions.md
-- [x] Create todo.md (this file)
-- [ ] Document deployment process
-- [ ] Create snapshot v002 (after wiki deployment)
+- [x] Create onboarding documentation
+- [x] Create todo.md for progress tracking
+- [ ] Create deployment snapshot v002
 
 ### Repository Structure
-- [ ] Decide: monorepo vs separate repos for wiki
-- [ ] Setup proper folder structure if monorepo
-- [ ] Configure shared configs (ESLint, Prettier if needed)
+- [x] Setup monorepo structure (landing/ and wiki/)
+- [ ] Configure shared configs if needed
 
 ### Cost Monitoring
 - [ ] Monitor Vercel usage (should be $0)
@@ -105,17 +93,25 @@ Key decisions made during development:
 | 2026-01-08 | Created todo.md | Maintain context between sessions | ✅ Done |
 | 2026-01-08 | Umami for analytics | Free, privacy-focused | ✅ Done |
 | 2026-01-09 | Wiki MVP approach | Notion export has HTML issues, start with clean intro page | ✅ Done |
-| 2026-01-09 | Manual wiki content | Owner will manually create all wiki pages (no automated conversion) | 🔄 In Progress |
+| 2026-01-09 | Manual wiki content | Owner will manually create all wiki pages (no automated conversion) | ✅ Changed |
+| 2026-01-10 | Automated Notion migration | Python script successfully converted all Notion content to Docusaurus | ✅ Done |
+| 2026-01-10 | Monorepo structure | Keep landing and wiki in same repo, deploy as separate Vercel projects | ✅ Done |
 
 ---
 
 ## 🚨 Blockers & Issues
 
-**Notion Export Issues** (non-critical):
-- HTML tags in markdown (`<?>`, `<O>`) break MDX parser
-- Image paths reference non-existent Notion hashes
-- Internal links use Notion URL encoding
-- **Solution**: Start with clean MVP, migrate content manually over time
+**No active blockers** 🎉
+
+**Resolved Issues**:
+- ✅ **404 DEPLOYMENT_NOT_FOUND on wiki.crossverse.tech** - fixed by adding custom domain in Vercel Dashboard
+
+**Resolved Notion Export Issues**:
+- ✅ HTML tags in markdown (`<?>`, `<O>`) - fixed with Python script escaping
+- ✅ Image paths - handled in migration script
+- ✅ Internal links - converted to relative paths
+- ✅ File naming - converted to kebab-case
+- ✅ Frontmatter - added slug and title to all pages
 
 ---
 
@@ -132,36 +128,46 @@ Key decisions made during development:
 
 **What's Live**:
 - ✅ Landing page at https://crossverse.tech
+- ✅ Wiki at https://wiki.crossverse.tech
 - ✅ GitHub repo connected
-- ✅ Auto-deployment configured
+- ✅ Auto-deployment configured (both projects)
+- ✅ All Notion content migrated to Docusaurus
 
 **Next Priority**:
-- 🎯 Migrate Notion content to Docusaurus (fix HTML/formatting issues)
-- 🎯 Verify wiki locally before deploying
+- 🎯 Submit wiki to Google Search Console
+- 🎯 Monitor indexing for both sites
 
-**Estimated Progress**: ~50% of Phase 1 complete (wiki content migration needed)
+**Estimated Progress**: 🎉 **Phase 1 MVP - 100% COMPLETE**
 
 ---
 
 ## 🔄 Session Notes
 
+### Session 2026-01-10 (Part 2 - Deployment Fix)
+- **RESOLVED**: Fixed wiki.crossverse.tech 404 error by adding custom domain in Vercel
+- Committed platform-entities.md to repository (commit 15f80b2)
+- Updated onboarding.md with documentation requirements (high-level tasks only)
+- **SUCCESS**: Wiki fully deployed and working at https://wiki.crossverse.tech
+- **MILESTONE**: Phase 1 MVP complete - both landing and wiki are live
+
+### Session 2026-01-10 (Part 1)
+- Migrated all Notion content to Docusaurus using Python script
+- Verified wiki builds successfully locally
+- Added wiki to GitHub (monorepo structure)
+- Created second Vercel project for wiki
+
 ### Session 2026-01-09
-- Researched wiki engines (Docusaurus vs VitePress vs Nextra vs MkDocs)
-- Selected **Docusaurus** (best Notion support, large community)
-- Setup Docusaurus wiki project structure
-- Fixed MDX compilation issues (style attributes, HTML tags)
-- Wiki working locally at localhost:3000
-- **Decision**: Owner will manually create all wiki pages (no automated migration)
-- Removed converter scripts (convert-html-to-md.js, migrate-wiki-v2.js)
+- Researched and selected **Docusaurus** for wiki
+- Setup Docusaurus project structure
+- Fixed initial MDX compilation issues
+- **Decision**: Initially planned manual wiki migration, later automated with Python
 
 ### Session 2026-01-08
 - Added Umami analytics to landing
-- Configured Google Search Console (DNS verification)
-- Submitted sitemap
+- Configured Google Search Console
 - Created todo.md for progress tracking
 
 ### Session 2026-01-07 (previous chat)
 - Created landing page
-- Setup Vercel deployment
-- Configured DNS
-- Site went live successfully
+- Setup Vercel deployment and DNS
+- Site went live at crossverse.tech
