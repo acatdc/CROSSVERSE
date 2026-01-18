@@ -1,6 +1,6 @@
 # CROSSVERSE - TODO & Progress Tracker
 
-> **Last updated**: 2026-01-10
+> **Last updated**: 2026-01-18
 > **Purpose**: Track progress and maintain context between sessions
 
 ---
@@ -35,6 +35,16 @@ Launch full web presence for CROSSVERSE with focus on SEO indexing and minimal c
 - [x] Configure custom domain `wiki.crossverse.tech`
 - [x] Verify wiki is live at https://wiki.crossverse.tech
 - [ ] Submit wiki to Google Search Console
+
+### PWA App (`app.crossverse.tech`)
+- [x] Add PWA files to monorepo (PWA/ directory)
+- [x] Create separate Vercel project with Root Directory = PWA
+- [x] Configure manifest.json and meta tags
+- [x] Fix asset paths for deployment
+- [x] Deploy to Vercel
+- [x] Configure custom domain `app.crossverse.tech`
+- [x] Verify PWA is live at https://app.crossverse.tech
+- [x] Test PWA features (splash screen, loading, presets)
 
 ---
 
@@ -96,6 +106,7 @@ Key decisions made during development:
 | 2026-01-09 | Manual wiki content | Owner will manually create all wiki pages (no automated conversion) | ✅ Changed |
 | 2026-01-10 | Automated Notion migration | Python script successfully converted all Notion content to Docusaurus | ✅ Done |
 | 2026-01-10 | Monorepo structure | Keep landing and wiki in same repo, deploy as separate Vercel projects | ✅ Done |
+| 2026-01-18 | PWA deployment strategy | Deploy PWA as separate Vercel project with Root Directory = PWA | ✅ Done |
 
 ---
 
@@ -129,19 +140,31 @@ Key decisions made during development:
 **What's Live**:
 - ✅ Landing page at https://crossverse.tech
 - ✅ Wiki at https://wiki.crossverse.tech
+- ✅ PWA App at https://app.crossverse.tech
 - ✅ GitHub repo connected
-- ✅ Auto-deployment configured (both projects)
+- ✅ Auto-deployment configured (all 3 projects)
 - ✅ All Notion content migrated to Docusaurus
 
 **Next Priority**:
 - 🎯 Submit wiki to Google Search Console
-- 🎯 Monitor indexing for both sites
+- 🎯 Monitor indexing for all sites
+- 🎯 Consider adding Service Worker to PWA (offline mode)
 
-**Estimated Progress**: 🎉 **Phase 1 MVP - 100% COMPLETE**
+**Estimated Progress**: 🎉 **Phase 1 MVP - 100% COMPLETE + PWA BONUS**
 
 ---
 
 ## 🔄 Session Notes
+
+### Session 2026-01-18 (PWA Integration)
+- **COMPLETED**: Integrated PWA application at https://app.crossverse.tech
+- Created separate Vercel project for PWA with Root Directory = PWA
+- Fixed all asset paths from /app/ to / (root paths)
+- Removed incorrect vercel.json from main repo
+- Configured manifest.json with proper PWA settings
+- Fixed background color issue (removed red debug background)
+- **SUCCESS**: PWA fully deployed with PixiJS splash screen and presets
+- **MILESTONE**: All 3 subdomains now live (landing, wiki, app)
 
 ### Session 2026-01-10 (Part 2 - Deployment Fix)
 - **RESOLVED**: Fixed wiki.crossverse.tech 404 error by adding custom domain in Vercel

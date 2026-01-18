@@ -7,6 +7,8 @@ Official website for CROSSVERSE project.
 ```
 crossverse-site/
 ├── landing/              # Main landing page (crossverse.tech)
+├── wiki/                 # Wiki documentation (wiki.crossverse.tech)
+├── PWA/                  # PWA application (app.crossverse.tech)
 ├── snapshots/            # Version snapshots (v001, v002, etc.)
 ├── onboarding.md         # Project onboarding guide
 └── onboarding_tech_assumptions.md  # Technical specifications
@@ -14,8 +16,9 @@ crossverse-site/
 
 ## Quick Links
 
-- **Domain**: [crossverse.tech](https://crossverse.tech)
-- **Wiki**: [wiki.crossverse.tech](https://wiki.crossverse.tech) _(coming soon)_
+- **Landing**: [crossverse.tech](https://crossverse.tech)
+- **Wiki**: [wiki.crossverse.tech](https://wiki.crossverse.tech)
+- **PWA App**: [app.crossverse.tech](https://app.crossverse.tech)
 
 ## Documentation
 
