@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- PWA Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Crossverse">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#667eea">
+    <meta name="description" content="Crossverse PWA Application">
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="152x152" href="/app/icons/icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/app/icons/icon-192x192.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/app/icons/icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/app/icons/icon-512x512.png">
+
+    <!-- Manifest -->
+    <link rel="manifest" href="/app/manifest.json">
+
+    <title>Crossverse - Loading</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: red; /* TEMPORARY: Red to see if HTML is covering canvas */
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+        }
+
+        #splash-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        #pixi-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Loading Bar Container */
+        #loading-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 20;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        #loading-container.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        #loading-text {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #loading-bar-outer {
+            width: 300px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #loading-bar-inner {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.1s linear;
+            position: relative;
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.6);
+        }
+
+        #loading-bar-segments {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        .loading-segment {
+            flex: 1;
+            border-right: 2px solid rgba(0, 0, 0, 0.3);
+        }
+
+        .loading-segment:last-child {
+            border-right: none;
+        }
+
+        #enter-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px 60px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            z-index: 20;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        #enter-button.visible {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        #enter-button:hover {
+            transform: translate(-50%, -50%) scale(1.05);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+        }
+
+        #enter-button:active {
+            transform: translate(-50%, -50%) scale(0.98);
+        }
+
+        #main-app {
+            display: none;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #fff;
+            padding: 20px;
+            background: linear-gradient(135deg, #2c3e50 0%, #bdc3c7 100%);
+        }
+
+        #main-app.active {
+            display: flex;
+        }
+
+        #main-app h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        #main-app p {
+            font-size: 18px;
+            color: #aaa;
+            text-align: center;
+            max-width: 600px;
+        }
+
+        /* Mobile optimization */
+        @media (max-width: 768px) {
+            #loading-bar-outer {
+                width: 250px;
+                height: 35px;
+            }
+
+            #loading-text {
+                font-size: 16px;
+            }
+
+            #enter-button {
+                padding: 16px 48px;
+                font-size: 20px;
+                min-height: 60px;
+            }
+
+            #main-app h1 {
+                font-size: 32px;
+            }
+
+            #main-app p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #loading-bar-outer {
+                width: 220px;
+                height: 32px;
+            }
+
+            #loading-text {
+                font-size: 14px;
+            }
+
+            #enter-button {
+                padding: 14px 40px;
+                font-size: 18px;
+                min-height: 56px;
+            }
+
+            #main-app h1 {
+                font-size: 28px;
+            }
+
+            #main-app p {
+                font-size: 14px;
+            }
+        }
+
+        /* Landscape mobile */
+        @media (max-height: 500px) and (orientation: landscape) {
+            #loading-bar-outer {
+                width: 200px;
+                height: 28px;
+            }
+
+            #loading-text {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+
+            #enter-button {
+                padding: 12px 36px;
+                font-size: 16px;
+            }
+
+            #main-app h1 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="splash-screen">
+        <div id="pixi-canvas"></div>
+
+        <!-- Loading Bar -->
+        <div id="loading-container">
+            <div id="loading-text">LOADING</div>
+            <div id="loading-bar-outer">
+                <div id="loading-bar-inner"></div>
+                <div id="loading-bar-segments">
+                    <div class="loading-segment"></div>
+                    <div class="loading-segment"></div>
+                    <div class="loading-segment"></div>
+                    <div class="loading-segment"></div>
+                    <div class="loading-segment"></div>
+                    <div class="loading-segment"></div>
+                </div>
+            </div>
+        </div>
+
+        <button id="enter-button">Enter</button>
+    </div>
+
+    <div id="main-app">
+        <h1>Welcome to Crossverse</h1>
+        <p>Your PWA application main screen goes here. This is a placeholder for your main application content.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/pixi.js@8.5.2/dist/pixi.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/PixiPlugin.min.js"></script>
+    <script>
+        // PixiJS Application Setup
+        const app = new PIXI.Application();
+        let currentPreset = null;
+        let loadingProgress = 0;
+        const LOADING_DURATION = 5000; // 5 seconds
+        const LOADING_INTERVAL = 100; // Update every 100ms
+
+        // Load random preset
+        async function loadRandomPreset() {
+            try {
+                const response = await fetch('/app/presets/presets.json');
+                const data = await response.json();
+                const presets = data.presets;
+
+                // Select random preset
+                const randomPreset = presets[Math.floor(Math.random() * presets.length)];
+                console.log('Loading preset:', randomPreset.name);
+
+                // Load preset script
+                const script = document.createElement('script');
+                script.src = `/app/presets/${randomPreset.file}`;
+
+                return new Promise((resolve, reject) => {
+                    script.onload = () => {
+                        // Get preset object by ID
+                        const presetName = `Preset${randomPreset.id.charAt(0).toUpperCase() + randomPreset.id.slice(1)}`;
+                        currentPreset = window[presetName];
+                        resolve(currentPreset);
+                    };
+                    script.onerror = reject;
+                    document.head.appendChild(script);
+                });
+            } catch (error) {
+                console.error('Error loading preset:', error);
+                return null;
+            }
+        }
+
+        async function initPixi() {
+            await app.init({
+                resizeTo: window,
+                backgroundColor: 0x0a0a0a,
+                antialias: true,
+                resolution: window.devicePixelRatio || 1,
+                autoDensity: true,
+            });
+
+            document.getElementById('pixi-canvas').appendChild(app.canvas);
+
+            // Load and initialize random preset
+            await loadRandomPreset();
+
+            if (currentPreset) {
+                currentPreset.init(app);
+                // Start animation with preset
+                app.ticker.add((delta) => {
+                    if (currentPreset) {
+                        currentPreset.animate(delta);
+                    }
+                });
+            }
+
+            // Start loading bar animation
+            startLoadingAnimation();
+        }
+
+        function startLoadingAnimation() {
+            const loadingBarInner = document.getElementById('loading-bar-inner');
+            const startTime = Date.now();
+
+            const updateLoading = setInterval(() => {
+                const elapsed = Date.now() - startTime;
+                loadingProgress = Math.min((elapsed / LOADING_DURATION) * 100, 100);
+
+                loadingBarInner.style.width = loadingProgress + '%';
+
+                if (loadingProgress >= 100) {
+                    clearInterval(updateLoading);
+                    setTimeout(() => {
+                        hideLoadingBar();
+                        showEnterButton();
+                    }, 300);
+                }
+            }, LOADING_INTERVAL);
+        }
+
+        function hideLoadingBar() {
+            const loadingContainer = document.getElementById('loading-container');
+            loadingContainer.classList.add('hidden');
+        }
+
+        function showEnterButton() {
+            document.getElementById('enter-button').classList.add('visible');
+        }
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (app.renderer) {
+                app.renderer.resize(window.innerWidth, window.innerHeight);
+            }
+        });
+
+        // Enter button click handler
+        document.getElementById('enter-button').addEventListener('click', () => {
+            document.getElementById('splash-screen').style.display = 'none';
+            document.getElementById('main-app').classList.add('active');
+
+            // Cleanup preset
+            if (currentPreset && currentPreset.cleanup) {
+                currentPreset.cleanup();
+            }
+
+            // Stop PixiJS animation
+            app.ticker.stop();
+        });
+
+        // Initialize
+        initPixi();
+
+        // PWA Install prompt
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            // Prevent the mini-infobar from appearing on mobile
+            e.preventDefault();
+            // Stash the event so it can be triggered later
+            deferredPrompt = e;
+            console.log('PWA install prompt available');
+        });
+
+        window.addEventListener('appinstalled', () => {
+            console.log('PWA was installed');
+            deferredPrompt = null;
+        });
+    </script>
+</body>
+</html>

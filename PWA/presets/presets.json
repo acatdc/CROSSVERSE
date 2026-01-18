@@ -1,0 +1,34 @@
+{
+  "presets": [
+    {
+      "id": "geometric",
+      "name": "Geometric Shapes",
+      "file": "preset-geometric.js",
+      "description": "Animated geometric shapes (circles, triangles, rectangles)"
+    },
+    {
+      "id": "particles",
+      "name": "Particle Flow",
+      "file": "preset-particles.js",
+      "description": "Flowing particle system"
+    },
+    {
+      "id": "waves",
+      "name": "Wave Motion",
+      "file": "preset-waves.js",
+      "description": "Animated wave patterns"
+    },
+    {
+      "id": "vectorfield",
+      "name": "Vector Field",
+      "file": "preset-vectorfield.js",
+      "description": "Particle flow through rotating vector field"
+    },
+    {
+      "id": "cmykgrid",
+      "name": "CMYK Grid",
+      "file": "preset-cmyk-grid.js",
+      "description": "RGB circle triads with GSAP stagger animation"
+    }
+  ]
+}
