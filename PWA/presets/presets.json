@@ -29,6 +29,12 @@
       "name": "CMYK Grid",
       "file": "preset-cmyk-grid.js",
       "description": "RGB circle triads with GSAP stagger animation"
+    },
+    {
+      "id": "sinusoidalwarp",
+      "name": "Sinusoidal Warp",
+      "file": "preset-sinusoidal-warp.js",
+      "description": "Bump-mapped sinusoidal warp with procedural texture"
     }
   ]
 }
